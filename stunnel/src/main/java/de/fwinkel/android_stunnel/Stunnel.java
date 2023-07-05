@@ -35,13 +35,15 @@ public class Stunnel implements Closeable {
         //wait until Stunnel is fully initialized
         BufferedReader reader = new BufferedReader(new InputStreamReader(this.process.getErrorStream()));
 
-        String line;
-        while((line = reader.readLine()) != null) {
-//            Log.d(LOG_TAG, line);
 
-            if(line.contains("Configuration successful"))
-                break;
-        }
+        //remove break, if you want using for tunneling
+    //    String line;
+ //       while((line = reader.readLine()) != null) {
+//            Log.d(LOG_TAG, line);
+//
+   //         if(line.contains("Configuration successful"))
+   //             break;
+    //    }
     }
 
     @Override
